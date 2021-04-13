@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Hero App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pequeña aplicación con data de algunos héroes del universo de DC Comics y Marvel.
 
 ## Available Scripts
 
