@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Redirect, Route, Switch } from 'react-router';
+
+import Header from './components/Header';
+import MarvelPage from './pages/MarvelPage';
+import DcPage from './pages/DcPage';
+import HeroPage from './pages/HeroPage';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <React.Fragment>
+    <Header />
+    <Switch>
+      <Route exact path="/marvel" component={MarvelPage} />
+      <Route exact path="/dc" component={DcPage} />
+      <Route exact path="/hero/:heroeId" component={HeroPage} />
+      <Redirect to="/marvel" />
+    </Switch>
+  </React.Fragment>
+);
 
 export default App;
